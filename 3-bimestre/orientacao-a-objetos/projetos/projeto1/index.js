@@ -6,7 +6,7 @@ class Livro {
         this.disponivel = true
     }
 
-   emprestar() {
+    emprestar() {
         if (this.disponivel) {
             this.disponivel = false
         }
@@ -22,6 +22,5 @@ class Livro {
         return this.disponivel
     }
 }
-
 
 module.exports = Livro
