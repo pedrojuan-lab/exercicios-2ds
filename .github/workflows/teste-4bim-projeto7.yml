@@ -1,9 +1,9 @@
-name: Correção do Projeto 3V2
+name: Correção do Projeto 7 — 4º Bimestre
 
 on:
   push:
     paths:
-      - "3-bimestre/orientacao-a-objetos/projetos/projeto3v2/**"
+      - "4-bimestre/orientacao-a-objetos/projetos/projeto7/**"
 
 jobs:
   correcao:
@@ -19,12 +19,12 @@ jobs:
 
           echo "Aluno identificado: $ALUNO"
           echo "Pasta que será testada:"
-          echo "3-bimestre/orientacao-a-objetos/projetos/projeto3v2/$ALUNO"
+          echo "4-bimestre/orientacao-a-objetos/projetos/projeto7/$ALUNO"
 
       - name: Verificar pasta do aluno
         run: |
           ALUNO="${{ github.actor }}"
-          PASTA="3-bimestre/orientacao-a-objetos/projetos/projeto3v2/$ALUNO"
+          PASTA="4-bimestre/orientacao-a-objetos/projetos/projeto7/$ALUNO"
 
           if [ -d "$PASTA" ]; then
             echo "✅ Pasta encontrada!"
@@ -41,9 +41,9 @@ jobs:
           node-version: "20"
 
       - name: Instalar dependências
-        working-directory: 3-bimestre/orientacao-a-objetos/projetos/projeto3v2/${{ github.actor }}
+        working-directory: 4-bimestre/orientacao-a-objetos/projetos/projeto7/${{ github.actor }}
         run: npm install
 
       - name: Rodar testes
-        working-directory: 3-bimestre/orientacao-a-objetos/projetos/projeto3v2/${{ github.actor }}
+        working-directory: 4-bimestre/orientacao-a-objetos/projetos/projeto7/${{ github.actor }}
         run: npm test
