@@ -4,8 +4,9 @@ const projeto = {
 	rodar(script) {
 		return `Executando: npm run ${script}`
 	},
-	temScript(script) {
-		return this.scripts.includes(script)
+	
+temScript(script) {
+	return this.scripts.includes(script)
 	},
 }
 
